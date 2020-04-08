@@ -20,7 +20,5 @@ from booking import views as core_views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url(r'^signup/', core_views.signup, name='signup'),
-    url(r'^home/', admin.site.urls, name='home'),
-    url(r'^$', admin.site.urls, name='home'),
+    url(r'signup/', core_views.signup, name='signup'),
 ]

@@ -1,0 +1,5 @@
+booking/__pycache__/
+booking/migrations/__pycache__/
+calendarbooking/__pycache__/
+db.sqlite3
+.idea/
