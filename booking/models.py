@@ -9,5 +9,6 @@ class slots(models.Model):
         on_delete=models.CASCADE,
         null = False)
     dateFromSlot = models.DateTimeField(null = False)
+    booked = models.BooleanField(null = False)
     class Meta:
         unique_together = ('dateFromSlot', 'user')

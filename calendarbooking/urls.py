@@ -21,5 +21,6 @@ from booking import views as core_views
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'signup/', core_views.signup, name='signup'),
-    url(r'^listslots/$', core_views.SlotBooking.as_view())
+    url(r'^listslots/$', core_views.ListSlot.as_view()),
+    url(r'^bookslot/$', core_views.SlotBooking.as_view())
 ]
