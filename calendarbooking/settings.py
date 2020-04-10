@@ -136,3 +136,7 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+import django_heroku
+# Then all the way at the bottom of the file
+# ...
+django_heroku.settings(locals())
