@@ -69,6 +69,9 @@ class ListSlot(APIView):
 
 
 def signup(request):
+    if not request.user.is_anonymous:
+        details = {}
+        return render(request, 'alreadylogged.html', {'details': details})
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -77,12 +80,15 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('/admin/')
+            return redirect('')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
 def home(request):
+    if not request.user.is_anonymous:
+        details = {}
+        return render(request, 'alreadylogged.html', {'details': details})
     if request.method == 'GET':
         details = {}
         return render(request, 'home.html', {'details': details})
