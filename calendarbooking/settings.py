@@ -25,7 +25,7 @@ SECRET_KEY = 'hg^91!288=*d93(&byh@ol!4^tnntild+0=&686*8gop16#az8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["calendarbooking.herokuapp.com"]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
